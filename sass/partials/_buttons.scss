@@ -1,0 +1,44 @@
+/* Buttons
+-----------------------------------------------------------------------------*/
+.btn-blue {
+	position: relative;
+	display: inline-block;
+	padding: 14px 25px 12px;
+	border: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background: $blue;
+	font: 13px/1 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+	text-shadow: 1px 1px 0 rgba(#000, .2);
+
+	&:hover {
+		background: darken($blue, 10);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&.w-arrow {
+		padding-right: 66px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 40px;
+			background: #5195c0;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 15px;
+			margin: auto;
+			@extend .icon-arrow-r;
+		}
+	}
+}

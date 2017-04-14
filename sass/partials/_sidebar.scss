@@ -1,0 +1,102 @@
+/* Sidebar
+-----------------------------------------------------------------------------*/
+
+.sidebar {
+	position: fixed;
+	top: 50%;
+	@include transform(translateY(-50%));
+	z-index: 100;
+	width: 500px;
+	left: -450px;
+}
+
+.side-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	display: none;
+		
+	@media (min-width: 1000px) {
+		display: block;
+	}
+
+
+	&__item {
+		height: 50px;
+		margin: 0 0 1px;
+		position: relative;
+		@include transition (all ease-out .3s);
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 0 0 0 25px;
+		text-decoration: none;
+		color: #feffff;
+		text-transform: uppercase;
+		font: 14px/1.2 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+		background: #5eb4e9;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+			@include transform(translateX(100%));
+			margin-right: 50px;
+
+			.side-nav__icon {
+				background: #5195c0;
+
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+		top: 2px;
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		height: 50px;
+		width: 53px;
+		position: relative;
+		margin: 0 0 0 20px;
+		@include transition (all ease-out .2s);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			opacity: .8;
+			@include transition (all ease-out .2s);
+		}
+
+		&.help:before {
+			@extend .icon-menu-help;
+		}
+
+		&.money:before {
+			@extend .icon-menu-money;
+		}
+
+		&.costs:before {
+			@extend .icon-menu-costs;
+		}
+
+		&.calc:before {
+			@extend .icon-menu-calc;
+		}
+	}
+}

@@ -1,0 +1,274 @@
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	position: relative;
+	background: url(../images/bg.gif);
+}
+
+.footer-separator{
+	position: absolute;
+	top: -8px;
+	left: 0;
+	right: 0;
+	height: 18px;
+	border-top: 1px solid rgba(32, 32, 32, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+	&__btn{
+		position: absolute;
+		left: 50%;
+		top: -12px;
+		margin-left: 0 0 0 -25px;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		background: url(../images/bg.gif);
+		cursor: pointer;
+		@include transition (all linear .1s);
+
+		&:hover{
+			border: 3px solid #5aaadc;
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -5px 0 0 -7px;
+			@extend .icon-arrow-u;
+		}
+	}
+}
+
+.logo-dark{
+	margin: 10px 0 10px;
+
+	@media (min-width: 992px) {
+		margin: 73px 0 60px 9px;
+	}
+}
+
+.footer-mid{
+	padding: 55px 0;
+}
+
+.footer-bottom{
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 22px 0;
+}
+
+.f-col-1{
+	width: 320px;
+	margin: 0 auto;
+
+	@media (min-width: 992px) {
+		float: left;
+		width: 370px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 412px;
+	}
+
+	@media (min-width: 1350px) {
+		width: 450px;
+	}
+}
+
+.f-col-2{
+	overflow: hidden;
+	padding: 0;
+	margin: 0 auto;
+	width: 360px;
+
+	@media (min-width: 700px) {
+		float: left;
+		width: 360px;
+		margin: 0;
+	}
+
+	@media (min-width: 992px) {
+		width: 360px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 360px;
+	}
+
+	@media (min-width: 1350px) {
+		width: 460px;
+	}
+}
+
+.f-col-3{
+	width: 275px;
+	margin: 0 auto;
+
+	@media (min-width: 700px) {
+		float: right;
+	}
+
+	@media (min-width: 992px) {
+		float: left;
+		width: 210px;
+		margin: 0;
+	}
+
+	@media (min-width: 1200px) {
+		width: 368px;
+	}
+
+	@media (min-width: 1350px) {
+		width: 370px;
+	}
+}
+
+.f-menu{
+	font: 11px/1.28571428 Arial, Helvetica, sans-serif;
+	width: 170px;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	&__item{
+		position: relative;
+		margin: 0;
+		list-style: none;
+		border-bottom: dashed 1px rgba(255, 255, 255, 0.2);
+
+		&:hover:after{
+			background: #5eb4e9;
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: -20px;
+			top: 50%;
+			margin: -3px 0 0 0;
+			width: 5px;
+			height: 5px;
+			background: #444444;
+			border-radius: 50%;
+			@include transition (all linear .2s);
+		};
+	}
+
+	&__link{
+		display: block;
+		padding: 17px 0;
+		color: #4a4a4a;
+
+		&:hover{
+			color: #5eb4e9;
+			text-decoration: none;
+		}
+	}
+}
+
+.contact-mail{
+	text-align: center;
+	margin:  32px 0 12px;
+
+	&__link{
+		color: #4a4a4a;
+
+		&:hover{
+			color: #fff;
+			text-decoration: none;
+
+			.icon-email{
+				opacity: 1;
+			}
+		}
+	}
+
+	.icon-email{
+		margin: 0 14px 0 0;
+		opacity: 0.2;
+		@include transition (all linear .2s);
+	}
+
+	@media (min-width: 700px) {
+		float: right;
+		margin: 12px 0 62px;
+	}
+}
+
+.socials{
+	clear: both;
+	float: right;
+	display: block;
+	padding: 0;
+	margin: 0;
+
+	&__item{
+		list-style: none;
+		float: left;
+		margin: 0 0 1px 1px;
+		width: 54px;
+		height: 54px;
+		line-height: 52px;
+		background: #2f2f2f;
+		text-align: center;
+		cursor: pointer;
+		@include transition (all linear .2s);
+
+		&.vk:hover{
+			background: #4e7094;
+		}
+
+		&.tw:hover{
+			background: #31aae1;
+		}
+
+		&.fb:hover{
+			background: #3b5a97;
+		}
+
+		&.yt:hover{
+			background: #d91928;
+		}
+
+		&.gp:hover{
+			background: #df4a32;
+		}
+	}
+
+	.icon-social{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	@media (min-width: 992px) {
+		width: 166px;
+	}
+
+	@media (min-width: 1200px) {
+		width: auto;
+	}
+}
+
+.copyright {
+	font: 12px/1.28571428 Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #4a4a4a;
+	text-align: center;
+
+	&__site{
+		text-transform: uppercase;
+		font: 11px/1.28571428 Arial, Helvetica, sans-serif;
+		color: #4a4a4a;
+
+		&:hover{
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	@media (min-width: 700px) {
+		text-align: left;
+	}
+}

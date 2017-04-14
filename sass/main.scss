@@ -1,0 +1,100 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/functions";
+
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 110%;
+	background: #fff;
+	color: #676767;
+	font: 14px/1.28571428 Arial, Helvetica, sans-serif;
+}
+
+@include selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+@include placeholder {
+	color: #a8a6b7;
+}
+
+a {
+	color: #0680ba;
+	@include transition (all linear .2s);
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {/* */
+	border: none;
+	padding: 0;
+}
+
+#{$all-text-inputs-focus},
+textarea:focus,
+select:focus {
+	border-color: rgb(82, 168, 236) !important;
+	outline: 0;
+	outline: thin dotted \9;
+	@include transition(border-color linear 0.2s, box-shadow linear 0.2s);
+	@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+}
+
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+	outline: 0;
+}
+
+.clearfix:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: ".";
+	font-size: 0;
+}
+
+.clearfix { zoom: 1; }
+
+.ir {
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.container {
+	@media (min-width: 1350px){
+		width: 1310px;
+	}
+}
+
+
+@import "partials/icons";
+@import "partials/buttons";
+@import "partials/forms";
+
+@import "partials/sequence-slider";
+
+@import "partials/header";
+@import "partials/sidebar";
+@import "partials/content";
+@import "partials/footer";
